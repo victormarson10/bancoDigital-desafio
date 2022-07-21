@@ -41,6 +41,7 @@ public abstract class Conta implements IConta{
 		}else {
 			System.out.println("Saldo insuficiente para sacar!");
 			System.out.println("O saldo é : " + saldo + " e o valor a sacar é: " + valor);
+			throw new IllegalArgumentException("Não existe saldo para saque!");
 		}
 		
 		
@@ -60,6 +61,7 @@ public abstract class Conta implements IConta{
 		} else {
 			System.out.println("Saldo insuficiente para transferir!");
 			System.out.println("O saldo é : " + saldo + " e o valor a transferir é: " + valor);
+			throw new IllegalArgumentException("Não existe saldo para transferência!");
 		}
 		
 		
